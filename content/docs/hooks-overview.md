@@ -6,25 +6,26 @@ next: hooks-state.html
 prev: hooks-intro.html
 ---
 
-*Hooks* are a new addition in React 16.8. They let you use state and other React features without writing a class.
+*Hooks* React 16.8 મા નવા ઉમેરાયેલા છે. તેઓ તમને state અને React ના બીજી વિશેષતા class લખ્યા વગર વાપરવા દે છે.
 
-Hooks are [backwards-compatible](/docs/hooks-intro.html#no-breaking-changes). This page provides an overview of Hooks for experienced React users. This is a fast-paced overview. If you get confused, look for a yellow box like this:
 
->Detailed Explanation
+Hooks જુના code સાથે પણ ચાલે છે ([backwards-compatible](/docs/hooks-intro.html#no-breaking-changes)).આ page અનુભવી React વપરાવાળા માટે Hooks ની ઝાંખી છે.આ Page માં  ઝડપી અને ટૂંક માં સમાજવાયેલું છે.જો તમને મુંજવણ થાય તો નીચે છે એવા પીળા ડબ્બા જોવા
+
+> વિગતવાર સમજૂતી 
 >
->Read the [Motivation](/docs/hooks-intro.html#motivation) to learn why we're introducing Hooks to React.
+>અમે શું કામ Hooks ને React માં ઉમેર્યા એ જાણવા માટે હેતુ વાંચો.
 
-**↑↑↑ Each section ends with a yellow box like this.** They link to detailed explanations.
+**↑↑↑ દરેક વિભાગ ના અંત માં આવા પીળા ડબ્બા છે.** તે  વિગતવાર સમજૂતી ની લીંક છે 
 
 ## 📌 State Hook {#state-hook}
 
-This example renders a counter. When you click the button, it increments the value:
+આ કાઉન્ટર નું ઉદાહરણ છે. તમે જયારે બટન પાર ક્લિક કરો ત્યારે એ વધે છે.
 
 ```js{1,4,5}
 import React, { useState } from 'react';
 
 function Example() {
-  // Declare a new state variable, which we'll call "count"
+  // નવો variable ડેકલેર કરો, તેને આપણે "count" કહીશુ .
   const [count, setCount] = useState(0);
 
   return (
@@ -38,7 +39,7 @@ function Example() {
 }
 ```
 
-Here, `useState` is a *Hook* (we'll talk about what this means in a moment). We call it inside a function component to add some local state to it. React will preserve this state between re-renders. `useState` returns a pair: the *current* state value and a function that lets you update it. You can call this function from an event handler or somewhere else. It's similar to `this.setState` in a class, except it doesn't merge the old and new state together. (We'll show an example comparing `useState` to `this.state` in [Using the State Hook](/docs/hooks-state.html).)
+અહીં, `useState` *hook* છે (આનો મતલબ શું છે એ આપણે ટૂંક સમય મા વાત કરીશું) . We call it inside a function component to add some local state to it. React will preserve this state between re-renders. `useState` returns a pair: the *current* state value and a function that lets you update it. You can call this function from an event handler or somewhere else. It's similar to `this.setState` in a class, except it doesn't merge the old and new state together. (We'll show an example comparing `useState` to `this.state` in [Using the State Hook](/docs/hooks-state.html).)
 
 The only argument to `useState` is the initial state. In the example above, it is `0` because our counter starts from zero. Note that unlike `this.state`, the state here doesn't have to be an object -- although it can be if you want. The initial state argument is only used during the first render.
 
